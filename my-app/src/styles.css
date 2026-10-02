@@ -1,0 +1,55 @@
+:root {
+  --lime: #d7ee3a;
+  --lime-deep: #b8d41a;
+  --lime-pale: #f6fbc8;
+  --ink: #2b3310;
+  --ink-soft: #5d6a2a;
+  --paper: #fdfff0;
+}
+* { box-sizing: border-box; }
+body {
+  margin: 0;
+  background: var(--lime-pale);
+  color: var(--ink);
+  font-family: "Figtree", system-ui, sans-serif;
+}
+.page { max-width: 520px; margin: 0 auto; padding: 48px 20px 64px; text-align: center; }
+.title {
+  font-family: "Bricolage Grotesque", sans-serif;
+  font-weight: 700;
+  font-size: 2.1rem;
+  margin: 0 0 28px;
+  padding: 14px 20px;
+  background: var(--lime);
+  border: 2px solid var(--ink);
+  border-radius: 14px;
+}
+.card {
+  background: var(--paper);
+  border: 2px solid var(--ink);
+  border-radius: 14px;
+  padding: 22px 20px;
+  margin-bottom: 20px;
+}
+h2 { font-family: "Bricolage Grotesque", sans-serif; font-weight: 500; font-size: 1.15rem; margin: 0 0 14px; }
+.counter { display: inline-flex; align-items: center; gap: 18px; }
+.count { font-family: "Bricolage Grotesque", sans-serif; font-size: 2rem; font-weight: 700; min-width: 48px; }
+button { font: inherit; cursor: pointer; color: var(--ink); }
+button:focus-visible, input:focus-visible { outline: 3px solid var(--ink); outline-offset: 2px; }
+.round { width: 40px; height: 40px; border-radius: 50%; border: 2px solid var(--ink); background: var(--lime); font-size: 1.3rem; }
+.round:hover, .primary:hover { background: var(--lime-deep); }
+.row { display: flex; gap: 8px; }
+input[type="text"], .row input {
+  flex: 1; padding: 10px 12px; border: 2px solid var(--ink); border-radius: 10px; background: #fff; font: inherit; color: var(--ink);
+}
+.primary { padding: 10px 18px; border: 2px solid var(--ink); border-radius: 10px; background: var(--lime); font-weight: 500; }
+.error { color: #a12a1a; font-size: 0.9rem; min-height: 1.2em; margin: 6px 0 0; }
+.empty { color: var(--ink-soft); margin: 10px 0 0; }
+.list { list-style: none; padding: 0; margin: 10px 0 0; text-align: left; }
+.list li { display: flex; align-items: center; gap: 12px; padding: 10px 0; border-bottom: 1px solid var(--lime-deep); }
+.list li:last-child { border-bottom: 0; }
+.list input[type="checkbox"] { width: 20px; height: 20px; accent-color: var(--ink); }
+.list span { flex: 1; }
+.list span.done { text-decoration: line-through; color: var(--ink-soft); }
+.ghost { background: none; border: 0; font-size: 1.4rem; line-height: 1; padding: 0 6px; color: var(--ink-soft); }
+.ghost:hover { color: #a12a1a; }

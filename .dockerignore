@@ -1,0 +1,4 @@
+**/node_modules
+my-app/dist
+backend/data.json
+.git

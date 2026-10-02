@@ -1,0 +1,11 @@
+{
+  "name": "react-docker-ci-cd",
+  "private": true,
+  "scripts": {
+    "install:all": "npm install && npm install --prefix backend && npm install --prefix my-app",
+    "dev": "concurrently -n api,web -c yellow,green \"npm run start --prefix backend\" \"npm run dev --prefix my-app\"",
+    "build": "npm run build --prefix my-app",
+    "start": "npm run build && npm run start --prefix backend"
+  },
+  "devDependencies": { "concurrently": "^8.2.2" }
+}
